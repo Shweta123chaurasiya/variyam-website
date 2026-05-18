@@ -1,0 +1,1497 @@
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+   
+}
+
+html,
+body{
+    min-height:100%;
+    background:#000;
+}
+
+body{
+    font-family:'times new roman', serif;
+    background:transparent;
+    color:#f5e6d3;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;   
+    align-items:center;
+
+    padding:25px 8%;
+
+    position:sticky;
+    top:0;
+
+    z-index:1001;
+
+    background:transparent;
+
+    backdrop-filter:blur(10px);
+}
+
+.top-bar {
+    position:sticky;
+    top:0;
+    height:48px;
+    width:100%;
+    background:rgba(0,0,0,0.35);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1002;
+}
+
+.top-bar + nav {
+    top:48px;
+}
+
+.top-wrap {
+    width:100%;
+    max-width:1200px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    font-size:0.95rem;
+    color:#f5e6d3;
+}
+
+.top-left,
+.top-right {
+    display:flex;
+    align-items:center;
+    gap:28px;
+    flex-wrap:wrap;
+}
+
+.top-bar a {
+    color:#ad9c86;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.top-icon {
+    margin-right:8px;
+    font-size:1rem;
+}
+
+.top-right a {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border-left:1px solid rgba(0,0,0,0.1);
+    padding-left:18px;
+}
+
+.top-right a:first-child {
+    border-left:none;
+    padding-left:0;
+}
+
+.logo{
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   font-size:38px;
+    font-weight:700;
+    color:#f5e6d3;
+}
+.logo img{
+    width:60px;
+    height:60px;
+
+    object-fit:cover;
+    border-radius:50%;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#c46b2a;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:80px 8%;
+
+    position:relative;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("images/map.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+  
+}
+
+.hero-content{
+    max-width:700px;
+
+    background:transparent;
+
+    z-index:2;
+}
+
+/* LEFT CONTENT */
+
+
+.hero-content h1{
+    font: size 95px;
+    line-height:1;
+
+    font-weight:700;
+   margin-bottom:30px;
+
+    color:#f5e6d3;
+}
+
+.hero-content p{
+    font-size:24px;
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+    color:#dddddd;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn,
+.btn-secondary{
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.btn{
+    background:#c46b2a;
+    color:white;
+}
+
+.btn:hover{
+    background:#d67c39;
+}
+
+.btn-secondary{
+    border:1px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:black;
+}
+
+
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        flex-direction:column;
+
+        text-align:center;
+
+        padding-top:180px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .india-map{
+        width:280px;
+        margin-top:50px;
+    }
+
+    .pin{
+        width:28px;
+    }
+
+    .page-hero.contact-hero {
+      min-height:380px;
+      padding:120px 0;
+    }
+
+    .page-hero.contact-hero .hero-content {
+      padding:0 6%;
+    }
+
+    .page-hero.contact-hero h1 {
+      font-size:3rem;
+    }
+
+    .contact-section {
+      padding:50px 6%;
+    }
+
+    .contact-grid {
+      gap:18px;
+    }
+}
+
+/* ================= CONTACT PAGE ================= */
+
+.page-hero.contact-hero {
+    min-height:460px;
+    padding:0;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image:
+      linear-gradient(rgba(10,10,10,0.55), rgba(10,10,10,0.55)),
+      url("images/map.jpeg");
+    background-size:cover;
+    background-position:center;
+}
+
+.page-hero.contact-hero .hero-overlay {
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.35);
+}
+
+.page-hero.contact-hero .hero-content {
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:120px 8% 80px;
+    width:min(100%, 1100px);
+}
+
+.page-hero.contact-hero h1 {
+    font-size:4.6rem;
+    line-height:1.05;
+    margin-bottom:18px;
+    color:#ffffff;
+}
+
+.page-hero.contact-hero .breadcrumb {
+    color:#f5e6d3;
+    font-size:0.95rem;
+    letter-spacing:0.08em;
+}
+
+.page-hero.contact-hero .breadcrumb a {
+    color:#f5e6d3;
+    text-decoration:none;
+}
+
+.contact-section {
+    padding:80px 8%;
+    background: transparent;
+}
+
+.contact-grid {
+    display:grid;
+    grid-template-columns:repeat(4, minmax(220px, 1fr));
+    gap:28px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.contact-card {
+  
+    background:rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    color:#f5e6d3;
+
+    transition:0.4s;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+.contact-card .icon {
+    display:inline-flex;
+    width:60px;
+    height:60px;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#746d38;
+    color:#1c1c1c;
+    font-size:1.6rem;
+    margin-bottom:20px;
+}
+
+.contact-card h3 {
+    font-size:1.25rem;
+    margin-bottom:12px;
+    color:#848383;
+}
+
+.contact-card p {
+    color:#d4c1c1;
+    line-height:1.85;
+    font-size:0.98rem;
+}
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d97a2b;
+
+    background:rgba(255,255,255,0.09);
+}
+
+.whatsapp-float {
+    position:fixed;
+    right:30px;
+    bottom:28px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#6a716d;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#a1b69a;
+    font-size:28px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.25);
+    text-decoration:none;
+    z-index:1000;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color:white;
+}
+
+/* ================= GALLERY PAGE ================= */
+.gallery-page {
+    padding:120px 8% 80px;
+    background-image:
+     linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("images/Devdari-Waterfall.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    color:#b6adad;
+    min-height:100vh;
+}
+
+.gallery-page .section-title h1 {
+    font-size:3.2rem;
+    color:white;
+    margin-bottom:16px;
+}
+
+.gallery-page .section-title p {
+    max-width:760px;
+    margin:auto;
+    color:#fbf4f4;
+    line-height:1.8;
+}
+
+.gallery-filters {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+    list-style:none;
+    margin:50px 0 35px;
+    padding:0;
+}
+
+.gallery-filter-btn {
+    border:none;
+    background:transparent;
+    color:#5c5c5c;
+    font-weight:600;
+    padding:12px 18px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery-filter-btn:hover,
+.gallery-filter-btn.active {
+    background:#ffffff;
+    color:#1c1c1c;
+    box-shadow:0 16px 40px rgba(0,0,0,0.08);
+}
+
+.gallery-grid {
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.gallery-card {
+    position:relative;
+    border-radius:28px;
+    overflow:hidden;
+    min-height:300px;
+    box-shadow:0 18px 45px rgba(0,0,0,0.08);
+    background:rgba(0,0,0,0.45);
+    border:1px solid rgba(255,255,255,0.04);
+    backdrop-filter:blur(6px);
+}
+
+.gallery-card img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.35s ease;
+}
+
+.gallery-card:hover img {
+    transform:scale(1.05);
+}
+
+.gallery-overlay {
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.72) 100%);
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding:24px;
+    opacity:0;
+    transition:opacity 0.25s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity:1;
+}
+
+.view-button {
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:rgba(0,0,0,0.55);
+    border:1px solid rgba(255,255,255,0.2);
+    color:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-size:0.88rem;
+}
+
+.gallery-caption {
+    position:absolute;
+    left:24px;
+    bottom:24px;
+    color:#ffffff;
+    font-size:1rem;
+    font-weight:700;
+    text-shadow:0 16px 30px rgba(0,0,0,0.45);
+    z-index:2;
+}
+
+@media(max-width:992px) {
+    .gallery-grid {
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width:720px) {
+    .gallery-page {
+        padding:100px 4% 60px;
+    }
+
+    .gallery-grid {
+        grid-template-columns:1fr;
+    }
+
+    .gallery-filters {
+        justify-content:center;
+    }
+}
+
+/* ================= EXPERIENCES ================= */
+
+.experiences{
+
+    padding:100px 8%;
+
+    background:transparent;
+}
+.experience-categories{
+
+    margin-top:80px;
+}
+
+.experience-categories h2{
+
+    font-size:55px;
+
+    color:#f5e6d3;
+
+    margin-bottom:50px;
+
+    text-align:center;
+}
+
+/* GRID */
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+}
+
+/* CARD */
+
+.category-card{
+
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(8px);
+    padding:35px;
+    border-radius:25px;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.06);
+}
+
+/* HOVER */
+
+.category-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,0.12);
+}
+
+/* TITLE */
+
+.category-card h3{
+
+    font-size:28px;
+
+    color:#f5e6d3;
+
+    margin-bottom:20px;
+
+    line-height:1.3;
+}
+
+/* TEXT */
+
+.category-card p{
+
+    color:#dddddd;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+.section-title{
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:48px;
+
+    color:#f5e6d3;
+
+    margin-bottom:20px;
+}
+
+.section-title p{
+    color:#cccccc;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+}
+
+/* CARDS */
+
+.experience-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+/* SINGLE CARD */
+
+.experience-card{
+
+    background:rgba(0,0,0,0.5);
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45);
+    border:1px solid rgba(255,255,255,0.05);
+    backdrop-filter:blur(6px);
+}
+
+.experience-card:hover{
+
+    transform:translateY(-10px);
+}
+
+/* IMAGE */
+
+.experience-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+}
+
+/* CONTENT */
+
+.card-content{
+
+    padding:30px;
+}
+
+.card-content h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+    color:#f5e6d3;
+}
+
+.card-content p{
+
+    color:#cccccc;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+}
+
+/* LINK */
+
+.card-content a{
+
+    color:#c46b2a;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.card-content a:hover{
+
+    color:#d95319;
+}
+.experiences-page{
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("images/Devdari-Waterfall.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    color:white;
+}
+.experience-cards{
+
+    margin-top:80px;
+
+    display:flex;
+
+    flex-direction:row;
+
+    flex-wrap:wrap;
+
+    gap:40px;
+
+    padding:0 8%;
+}
+
+.card{
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:0.4s;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+
+    flex:1 1 320px;
+
+    min-width:320px;
+}
+
+.card{
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:0.4s;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+}
+
+.card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+}
+
+.card-content{
+
+    padding:25px;
+}
+
+.card-content h3{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+    color:#f5e6d3;
+}
+
+.card-content p{
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+    color:#dddddd;
+}
+
+.card-content a{
+
+    display:inline-block;
+
+    padding:12px 25px;
+
+    background:#d97a2b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:0.3s;
+}
+
+.card-content a:hover{
+
+    background:#f08a35;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .experience-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .experience-cards{
+
+        flex-direction:column;
+    }
+
+    .section-title h2{
+
+        font-size:36px;
+    }
+}
+.explore-btn{
+    display:inline-block;
+
+    padding:18px 35px;
+
+    background:#d97a2b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.explore-btn:hover{
+    transform:translateY(-3px);
+
+    background:#f08a35;
+}
+
+/* ================= ABOUT US PAGE ================= */
+body.AboutUsPage{
+
+    min-height:100vh;
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.65)),
+    url("images/Devdari-Waterfall.jpg");
+
+
+    
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    color:#f5e6d3;
+}
+.about-section{
+
+    padding:120px 8%;
+background:transparent;
+
+    color:white;
+}
+
+.about-container{
+
+    max-width:1400px;
+
+    margin:auto;
+}
+
+/* TAG */
+
+.about-tag{
+
+    color:#d97a2b;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+}
+
+/* HEADING */
+
+.about-section h2{
+
+    font-size:70px;
+
+    line-height:1.1;
+
+    color:#f5e6d3;
+
+    max-width:900px;
+
+    margin-bottom:35px;
+}
+
+/* INTRO */
+
+.about-intro{
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    color:#cccccc;
+
+    max-width:900px;
+
+    margin-bottom:80px;
+}
+
+/* GRID */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+}
+
+/* CARD */
+
+.about-card{
+
+    background:#1b1b1b;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    transition:0.4s;
+
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+/* HOVER */
+
+.about-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d97a2b;
+}
+
+/* CARD TITLE */
+
+.about-card h3{
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+    color:#f5e6d3;
+}
+
+/* CARD TEXT */
+
+.about-card p{
+
+    color:#bbbbbb;
+
+    line-height:1.9;
+
+    font-size:18px;
+}
+
+@media(max-width:768px) {
+    body.AboutUsPage .overlay-content {
+        padding:60px 6%;
+    }
+
+    body.AboutUsPage .Header {
+        padding:28px;
+    }
+
+    body.AboutUsPage .Header h1 {
+        font-size:2.8rem;
+    }
+
+    body.AboutUsPage .story-section {
+        padding:28px 24px;
+    }
+
+    body.AboutUsPage .story-section h2 {
+        font-size:2.1rem;
+    }
+
+    body.AboutUsPage .story-section h3 {
+        font-size:1.4rem;
+    }
+
+    body.AboutUsPage .overlay-content > div {
+        padding:24px;
+    }
+
+    body.AboutUsPage .overlay-content ul {
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+/* ================= WHAT WE OFFER ================= */
+
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 8%;
+}
+
+.hero h1{
+    font-size:3.6rem;
+    line-height:1.05;
+    margin-bottom:12px;
+    color:#f5e6d3;
+    font-weight:700;
+}
+
+.lead{
+    color:#e9dfc9;
+    font-size:1.125rem;
+    max-width:720px;
+    margin:12px 0 24px;
+}
+
+.offers{
+    padding:80px 0;
+}
+
+.offer-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:28px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.offer{
+    background:rgba(255,255,255,0.03);
+    border-radius:16px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.offer .icon{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:#c46b2a;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.6rem;
+    margin:0 auto 16px;
+}
+
+.offer h3{
+    margin-top:10px;
+    margin-bottom:8px;
+    color:#f5e6d3;
+    font-size:1.15rem;
+}
+
+.offer p{
+    color:#d2c8b2;
+    line-height:1.8;
+}
+
+.cta{
+    padding:60px 0;
+    text-align:center;
+}
+
+.cta .btn{
+    display:inline-block;
+    margin:18px auto 0;
+}
+
+.site-footer{
+    padding:36px 0;
+    text-align:center;
+    background:rgba(0,0,0,0.6);
+    color:#bdb09a;
+}
+
+@media(max-width:992px){
+    .offer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .offer-grid{
+        grid-template-columns:1fr;
+    }
+    .offer{
+        text-align:left;
+    }
+    .hero{
+        padding:60px 8%;
+    }
+    .container{padding:0 6%;}
+}
+
+/* =========================
+   STORY SECTION
+========================= */
+
+.story-section{
+
+    padding:120px 8%;
+
+    background:
+    linear-gradient(
+        rgba(10,10,10,0.82),
+        rgba(20,10,5,0.88)
+    ),
+    url("images/varanasi-ganga.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    color:#f5e6d3;
+}
+
+/* HEADER */
+
+.story-header{
+
+    max-width:1000px;
+
+    margin-bottom:80px;
+}
+
+.story-tag{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.08);
+
+    color:#d97a2b;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+}
+
+.story-header h1{
+
+    font-size:72px;
+
+    line-height:1.1;
+
+    margin-bottom:30px;
+
+    font-family:'Playfair Display', serif;
+
+    color:#f5e6d3;
+}
+
+.story-intro{
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#dddddd;
+
+    max-width:900px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    margin-bottom:100px;
+}
+
+.timeline-card{
+
+    background:rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:0.4s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d97a2b;
+}
+
+.timeline-card h2{
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+    color:#ffd8a4;
+
+    font-family:'Playfair Display', serif;
+}
+
+.timeline-card p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:#dddddd;
+}
+
+/* =========================
+   WORK SECTION
+========================= */
+
+.work-section{
+
+    margin-bottom:80px;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.work-section h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+    color:#f5e6d3;
+}
+
+.work-section p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#dddddd;
+}
+
+/* =========================
+   IMPACT SECTION
+========================= */
+
+.impact-section h2{
+
+    font-size:54px;
+
+    margin-bottom:50px;
+
+    text-align:center;
+
+    color:#f5e6d3;
+
+    font-family:'Playfair Display', serif;
+}
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+}
+
+.impact-card{
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:24px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    backdrop-filter:blur(8px);
+}
+
+.impact-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d97a2b;
+
+    background:rgba(255,255,255,0.08);
+}
+
+.impact-card h3{
+
+    font-size:56px;
+
+    color:#d97a2b;
+
+    margin-bottom:15px;
+
+    font-family:'Playfair Display', serif;
+}
+
+.impact-card p{
+
+    font-size:18px;
+
+    color:#f5e6d3;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .story-header h1{
+
+        font-size:48px;
+    }
+
+    .story-intro{
+
+        font-size:18px;
+    }
+
+    .work-section h2,
+    .impact-section h2{
+
+        font-size:38px;
+    }
+
+    .work-section p{
+
+        font-size:18px;
+    }
+
+    .impact-card h3{
+
+        font-size:42px;
+    }
+}
