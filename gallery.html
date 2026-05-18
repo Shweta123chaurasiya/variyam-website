@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Variyam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Variyam Logo">
+            <span>VARIYAM</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="gallery-page">
+        <div class="section-title">
+            <h1>Travel Gallery</h1>
+            <p>Browse our curated photo collection from memorable journeys, sorted by destination and season.</p>
+        </div>
+
+        <ul class="gallery-filters">
+            <li><button class="gallery-filter-btn active" data-category="all">All</button></li>
+            <li><button class="gallery-filter-btn" data-category="Dev-Dari Waterfalls">Dev-Dari Waterfalls</button></li>
+            <li><button class="gallery-filter-btn" data-category="Village Immersion">Village Immersion</button></li>
+            <li><button class="gallery-filter-btn" data-category="Streets">Streets</button></li>
+            <li><button class="gallery-filter-btn" data-category="Aarti">Aarti</button></li>
+            <li><button class="gallery-filter-btn" data-category="Ghats">Ghats</button></li>
+            <li><button class="gallery-filter-btn" data-category="Culture">Culture</button></li>
+            <li><button class="gallery-filter-btn" data-category="Videos">Videos</button></li>
+        </ul>
+
+        <div class="gallery-grid">
+            <article class="gallery-card" data-category="Dev-Dari Waterfalls">
+                <img src="images/Devdari-Waterfall.jpg" alt="Dev-Dari Waterfalls">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/Devdari-Waterfall.jpg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Dev-Dari Waterfalls</div>
+            </article>
+            <article class="gallery-card" data-category="Dev-Dari Waterfalls">
+                <img src="images/dev1.jpeg" alt="Nature Trail">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/dev1.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Dev-Dari Nature Trail</div>
+            </article>
+            <article class="gallery-card" data-category="Village Immersion">
+                <img src="images/Village_Immersion.jpeg" alt="Village Immersion">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/Village_Immersion.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Village Immersion</div>
+            </article>
+            <article class="gallery-card" data-category="Village Immersion">
+                <img src="images/immersion1.jpeg" alt="Village Life">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/immersion1.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Village Life</div>
+            </article>
+            <article class="gallery-card" data-category="Streets">
+                <img src="images/banaras.jpg" alt="Streets">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/banaras.jpg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Streets</div>
+            </article>
+            <article class="gallery-card" data-category="Aarti">
+                <img src="images/aarti.jpg" alt="Aarti">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/aarti.jpg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Aarti</div>
+            </article>
+            <!--ghats----> 
+            <article class="gallery-card" data-category="Ghats">
+                <img src="images/assi.jpg" alt="Ghats">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/assi.jpg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Ghats</div>
+            </article>
+            <article class="gallery-card" data-category="Ghats">
+                <img src="images/ghat2.jpeg" alt="Ghats">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/ghat2.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Ghats</div>
+            </article>
+            <article class="gallery-card" data-category="Ghats">
+                <img src="images/ghat3.jpeg" alt="Ghats">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/ghat3.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Ghats</div>
+            </article>
+            <article class="gallery-card" data-category="Ghats">
+                <img src="images/ghat4.jpeg" alt="Ghats">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/ghat4.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Ghats</div>
+            </article>
+            <article class="gallery-card" data-category="Ghats">
+                <img src="images/ghat5.jpeg" alt="Ghats">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/ghat5.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Ghats</div>
+            </article>
+            <article class="gallery-card" data-category="Culture">
+                <img src="images/farmer.jpeg" alt="Farmer">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/farmer.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Farmer</div>
+            </article>
+            <article class="gallery-card" data-category="Ghats">
+                <img src="images/ghats1.jpeg" alt="Ghats">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/ghats1.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Ghats</div>
+            </article>
+            <article class="gallery-card" data-category="Culture">
+                <img src="images/culture.jpeg" alt="Culture">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/culture.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Culture</div>
+            </article>
+            <article class="gallery-card" data-category="Videos">
+                <img src="images/impact.jpeg" alt="Videos">
+                <div class="gallery-overlay">
+                    <a class="view-button" href="images/impact.jpeg" target="_blank" rel="noreferrer noopener">View</a>
+                </div>
+                <div class="gallery-caption">Videos</div>
+            </article>
+        </div>
+    </section>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+        const galleryCards = document.querySelectorAll('.gallery-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.dataset.category;
+
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                galleryCards.forEach(card => {
+                    const match = category === 'all' || card.dataset.category === category;
+                    card.style.display = match ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
