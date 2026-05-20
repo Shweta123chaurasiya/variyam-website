@@ -396,17 +396,25 @@ nav ul li a:hover{
     margin-bottom:20px;
 }
 
-.contact-card h3 {
+..contact-card h3 {
     font-size:1.25rem;
     margin-bottom:12px;
     color:#848383;
+}
+
+.contact-card {
+    min-width:0;
 }
 
 .contact-card p {
     color:#d4c1c1;
     line-height:1.85;
     font-size:0.98rem;
+    max-width:100%;
+    overflow-wrap:anywhere;
+    word-break:break-word;
 }
+
 .contact-card:hover{
 
     transform:translateY(-10px);
